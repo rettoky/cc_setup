@@ -1,0 +1,24 @@
+{
+  "name": "cc-setup",
+  "version": "1.0.0",
+  "description": "Professional Claude Code plugin suite with 100+ specialized agents, multi-agent orchestration, statusline, and MCP integrations",
+  "author": {
+    "name": "rettoky",
+    "url": "https://github.com/rettoky"
+  },
+  "repository": "https://github.com/rettoky/cc_setup",
+  "license": "MIT",
+  "homepage": "https://github.com/rettoky/cc_setup#readme",
+  "keywords": [
+    "claude-code",
+    "agents",
+    "statusline",
+    "mcp",
+    "automation",
+    "multi-agent"
+  ],
+  "commands": "commands",
+  "agents": "agents",
+  "skills": "skills",
+  "mcpServers": ".mcp.json"
+}
