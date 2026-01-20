@@ -1,0 +1,13 @@
+{
+  "name": "cc-setup-marketplace",
+  "version": "1.0.0",
+  "description": "Claude Code Pro Plugins Marketplace",
+  "plugins": [
+    {
+      "name": "cc-setup",
+      "version": "1.0.0",
+      "description": "Professional Claude Code plugin suite with 100+ specialized agents, multi-agent orchestration, statusline, and MCP integrations",
+      "path": "."
+    }
+  ]
+}
