@@ -1,0 +1,40 @@
+{
+  "name": "awesome-statusline",
+  "version": "2.1.0",
+  "description": "Catppuccin-themed statusline with usage API integration",
+  "modes": {
+    "compact": {
+      "lines": 2,
+      "barWidth": 10,
+      "description": "Minimal 2-line layout"
+    },
+    "default": {
+      "lines": 2,
+      "barWidth": 10,
+      "description": "Standard 2-line layout with reset times"
+    },
+    "full": {
+      "lines": 5,
+      "barWidth": 40,
+      "description": "Detailed 5-line layout with all info"
+    }
+  },
+  "features": {
+    "contextUsage": true,
+    "apiUsage5H": true,
+    "apiUsage7D": true,
+    "gitBranch": true,
+    "modelDisplay": true,
+    "pathShortening": true,
+    "gradientColors": true
+  },
+  "colors": {
+    "theme": "catppuccin-mocha",
+    "context": ["maroon", "latte-maroon", "red"],
+    "usage5H": ["lavender", "blue", "red"],
+    "usage7D": ["yellow", "green", "red"]
+  },
+  "cache": {
+    "apiCacheSeconds": 300
+  }
+}

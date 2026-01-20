@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "claude-code-pro-plugins",
+  "version": "1.0.0",
+  "description": "Professional Claude Code plugin suite with 100+ specialized agents, multi-agent orchestration, statusline, and MCP integrations",
+  "author": "kimpa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/claude-code-pro-plugins"
+  },
+  "keywords": [
+    "claude-code",
+    "agents",
+    "statusline",
+    "mcp",
+    "automation"
+  ],
+  "components": {
+    "claude_md": {
+      "enabled": true,
+      "file": "CLAUDE.md",
+      "scope": "project",
+      "description": "Project instructions and agent architecture guide"
+    },
+    "agents": {
+      "enabled": true,
+      "directory": ".claude/agents",
+      "scope": "project",
+      "categories": [
+        "01-core-development",
+        "02-language-specialists",
+        "03-infrastructure",
+        "04-quality-security",
+        "05-data-ai",
+        "06-developer-experience",
+        "07-specialized-domains",
+        "08-business-product",
+        "09-meta-orchestration",
+        "10-research-analysis"
+      ],
+      "count": 100
+    },
+    "skills": {
+      "enabled": true,
+      "directory": ".claude/skills",
+      "scope": "project",
+      "files": [
+        "awesome-statusline-start.md",
+        "awesome-statusline-mode.md"
+      ]
+    },
+    "commands": {
+      "enabled": true,
+      "directory": ".claude/commands",
+      "scope": "global",
+      "files": [
+        "ag.md"
+      ],
+      "description": "Multi-agent orchestrator (P-D-R workflow)"
+    },
+    "mcp": {
+      "enabled": true,
+      "file": "mcp/servers.json",
+      "scope": "global",
+      "servers": [
+        {
+          "name": "context7",
+          "description": "Library documentation search",
+          "package": "@upstash/context7-mcp"
+        },
+        {
+          "name": "chrome-devtools",
+          "description": "Browser automation and debugging",
+          "package": "chrome-devtools-mcp"
+        },
+        {
+          "name": "n8n-mcp",
+          "description": "n8n workflow automation",
+          "package": "n8n-mcp",
+          "requiresConfig": true
+        },
+        {
+          "name": "supabase",
+          "description": "Supabase project management",
+          "package": "@supabase/mcp-server-supabase",
+          "requiresConfig": true
+        }
+      ]
+    },
+    "statusline": {
+      "enabled": true,
+      "directory": "statusline",
+      "scope": "global",
+      "modes": ["compact", "default", "full"],
+      "defaultMode": "compact",
+      "platform": {
+        "windows": {
+          "scripts": "statusline/scripts/*.ps1",
+          "runtime": "powershell"
+        },
+        "unix": {
+          "scripts": "statusline/scripts/*.sh",
+          "runtime": "bash",
+          "requires": ["jq"]
+        }
+      }
+    },
+    "templates": {
+      "enabled": true,
+      "directory": ".claude/templates",
+      "scope": "project",
+      "files": [
+        "agents-template.md"
+      ]
+    }
+  },
+  "install": {
+    "defaultScope": "project",
+    "backup": true,
+    "backupDir": ".claude-backup",
+    "interactive": true
+  },
+  "compatibility": {
+    "claudeCode": ">=1.0.0",
+    "platforms": ["windows", "macos", "linux"]
+  }
+}
