@@ -16,7 +16,10 @@
         "name": "rettoky",
         "email": "rettoky@github.com"
       },
-      "source": ".",
+      "source": {
+        "type": "github",
+        "repo": "rettoky/cc_setup"
+      },
       "category": "development"
     }
   ]
