@@ -11,10 +11,7 @@
       "name": "cc-setup",
       "version": "1.0.0",
       "description": "Professional Claude Code plugin suite with 100+ specialized agents, multi-agent orchestration, statusline, and MCP integrations",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/rettoky/cc_setup"
-      }
+      "source": "https://github.com/rettoky/cc_setup"
     }
   ]
 }
